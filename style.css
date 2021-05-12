@@ -1,0 +1,34 @@
+body {
+    font-family: monospace;
+    background-color: rgb(216, 216, 216);
+}
+
+#clicker {
+    margin-top: 220px;
+    margin-left: 653px;
+    border: none;
+    padding: 10px;
+    background-color: rgb(204, 50, 50);
+    border-radius: 8px;
+    outline: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    margin-top: 100px;
+    display: none;
+    margin-left: 646px; 
+    color: darkgrey;
+    text-decoration: none;
+}
+
+#autoclicker-button {
+    background-color: aqua;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px;
+}
