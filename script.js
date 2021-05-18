@@ -23,39 +23,40 @@ clicker.onclick = function () {
         let a = document.querySelector('a');
         a.style.display = 'block';
     }
-
 }
 
 function ON_OF_autoclicker() {
 
+    let isActive = false;
     let autoclicker = 0;
-
-    if (autoclickerButton.innerHTML == 'Autoclicker ON') {
 
         autoclickerButton.onclick = function () {
 
-            autoclickerButton.innerHTML = 'Autoclicker OFF';
+            if (isActive == false) {
 
-            autoclicker = setInterval(() => {
-            number++;
-            h1.textContent = number;
-            }, 1000);
+                isActive = true;
 
-        } 
+                autoclickerButton.textContent = 'Autoclicker OFF';
 
-    } 
-    if (autoclickerButton.innerHTML == 'Autoclicker OFF') {
-        
+                autoclicker = setInterval(() => {
+                    number++;
+                    h1.textContent = number;
+                }, 1000);
+            }
+
         autoclickerButton.onclick = function() {
-    
-            autoclickerButton.innerHTML = 'Autoclicker ON';
-    
-            clearInterval(autoclicker);
-    
-        }
-    
-    }
 
+            if (isActive == true) {
+
+                isActive = false;
+
+                autoclickerButton.textContent = 'Autoclicker ON';
+
+                clearInterval(autoclicker);
+
+            }
+        }
+    }
 }
 
 ON_OF_autoclicker();
